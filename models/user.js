@@ -4,19 +4,10 @@ const Users = function () {
 }
 
 Users.getUsers = (req, cb) => {
-
-    let sql =
+    const sql =
         'select * ' +
-        'from swig.public.user ';
-
-    if (req.orderBy) {
-        sql += 'order by ' + req.orderBy + ' ASC ';
-    }
-
-    if (req.limit) {
-        sql += 'limit ' + req.limit;
-    }
-
+        'from swig.public.user' +
+        req.orderBy + req.limit;
     snowflake.query(sql)
         .then(rows => {
             cb(null, rows)

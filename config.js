@@ -6,8 +6,8 @@
  */
 var config = {
     snowflake_account: 'KTB88008',
-    snowflake_user: 'dcarreon',
-    snowflake_password: '825173712Dan!',
+    snowflake_user: '',
+    snowflake_password: '',
     snowflake_role: 'ACCOUNTADMIN',
     snowflake_database: 'PUBLIC',
     snowflake_schema: 'SWIG',

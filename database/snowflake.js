@@ -61,15 +61,9 @@ const opts = {
 const myPool = genericPool.createPool(factory, opts);
 
 const query = (sqlText, bindParams = []) => {
-
-    console.log("Query: " + sqlText);
-
     return new Promise((resolve, reject) => {
         // Acquire connection from pool
         myPool.acquire().then(connection => {
-
-            console.log("Connection: " + connection);
-
             // Execute the query
             connection.execute({
                 sqlText: sqlText,
